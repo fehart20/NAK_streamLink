@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=streamLink
+Exec=/usr/bin/python3 /home/nak-watchdog/streamLink/streamLink_vlcOpener.py 
