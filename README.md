@@ -1,3 +1,34 @@
+## Hardware
+ - Raspberry Pi 4 (4GB)
+ - SD card (min. 8GB)
+ - Power Supply
+ - Button with LED
+ - (Colling-)Case for die Pi
+ - Plastic Box with cable outlet to safely mount the Pi
+ - Ethernet cable
+ - Mini-HDMI to HDMI cable
+
+### Cabling
+From|To
+---|---
+Button/LED Gnd|GND (Port 6)
+Button (+)|GPIO 3 (SCL)
+LED (+)|GPIO 14 (TXD)
+
+
+## Installation
+ 1. Flash *Raspbian Desktop* to the SD card via *Raspberry Pi Imager*
+ 2. Set it up with the following creadentials and settings:
+	 - Username: *nak-watchdog*
+	 - Password: *VAULT*
+	 - Hostname: *nak-streamLink-n* (Replace *n* with the corresponding number from the deployment sheet)
+3. Clone this repository via
+	```git clone ```
+4. Run the installation script via
+	```./install.sh```
+TODO
+
+
 ## Autostart durch Desktop
 Datei unter ~/.config/autostart/start_streamLink.desktop
 Folgende Ausführung:
@@ -9,7 +40,7 @@ Folgende Ausführung:
 ## Python-Script
 Scripts liegen unter ~/streamLink
 Google-Parser nicht in Verwendung - direkter (Short-)Link in Benutzung. (http://nactube.datagis.com/c/NAKNuertingen)
-siehe Scripts
+siehe Script
 
 
 Einschalten: Lampe des Tasters ist am Seriellen Port verbunden. In /boot/config.txt ist folgendes 
