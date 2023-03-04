@@ -22,12 +22,10 @@ LED (+)|GPIO 14 (TXD)
 	 - Username: *nak-watchdog*
 	 - Password: *VAULT*
 	 - Hostname: *nak-streamLink-n* (Replace *n* with the corresponding number from the deployment sheet)
-3. Clone this repository via 
+3. Clone this repository via  
 	```git clone ```
-4. Switch to 
-   ```cd NAK_streamLink```
-6. Run the installation script via 
-	```./install.sh```
+6. Run the installation script via  
+	```./NAK_streamLink/streamLink/scripts/install.sh```
 TODO
 
 

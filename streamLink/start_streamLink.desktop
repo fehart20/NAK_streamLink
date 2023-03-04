@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
 Name=NAK-streamLink
-Exec=/usr/bin/python3 /home/nak-watchdog/NAK_streamLink/streamLink/Scripts/streamLink_vlcOpener.py 
+Exec=/usr/bin/python3 /home/nak-watchdog/NAK_streamLink/streamLink/python/streamLink_vlcOpener.py 

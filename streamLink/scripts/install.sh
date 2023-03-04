@@ -10,6 +10,7 @@ pip install youtube_dl
 pip install python-vlc
 pip install tk
 pip install keyboard
+pip install RPi.GPIO
 
 sudo chmod ugo+x ./start.sh
 
@@ -23,7 +24,7 @@ echo 'Adding button config ...'
 sudo echo '[all]' >> /boot/config.txt
 sudo echo 'enable_uart=1' >> /boot/config.txt
  # Pi Power Button
-git clone https://github.com/Howchoo/pi-power-button.git
+git clone https://github.com/fehart20/pi-power-button.git
 sh ./pi-power-button/script/install
 
 sh ./start.sh
