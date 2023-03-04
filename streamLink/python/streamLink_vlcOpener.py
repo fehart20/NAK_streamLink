@@ -75,4 +75,4 @@ while True:
             os.system("shutdown -h now")
             break # End of script
     except:
-        show_message_in_gui(f"Gottesdienst aus {location} hat noch nicht begonnen ...\n\nBitte warten!", 30)
+        show_message_in_gui(f"Gottesdienst aus {location}\nhat noch nicht begonnen ...\n\nBitte warten!", 30)

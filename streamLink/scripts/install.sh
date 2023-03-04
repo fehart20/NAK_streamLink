@@ -3,7 +3,7 @@
 echo -e '=> Installing Updates ...\n'
 sudo apt update
 sudo apt upgrade -y
-echo '=> Installing needed packages ...\n'
+echo -e '=> Installing needed packages ...\n'
 sudo apt install python3 -y
 sudo apt install vlc -y
 sudo apt install cec-utils -y
@@ -24,12 +24,12 @@ cp ./NAK_streamLink/streamLink/start_streamLink.desktop ~/.config/autostart/star
 # Button functionality
 echo -e '=> Adding button config ...\n'
 sudo touch /boot/config.txt
-sudo echo '[all]' >> /boot/config.txt
+
 sudo echo 'enable_uart=1' >> /boot/config.txt
  # Pi Power Button
 cd ~
 git clone https://github.com/fehart20/pi-power-button.git
-sh ./pi-power-button/script/install
+sh ./pi-power-button/script/install # Why is this starting?
 
 # Config script
 echo -e "=> You can now run the config script to select a stream location via \n ./NAK_streamLink/streamLink/scripts/config.sh"

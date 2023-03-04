@@ -26,23 +26,22 @@ LED (+)|GPIO 14 (TXD)
 	 - Hostname: *nak-streamLink-n* (Replace *n* with the corresponding number from the deployment sheet)
 3. Clone this repository into ```/home/nak-watchdog/``` via  
 	```bash
-	git clone
+	git clone https://github.com/fehart20/NAK_streamLink.git
 	```
 4. Run the installation script via  
 	```bash
 	./NAK_streamLink/streamLink/scripts/install.sh
 	```
-5. You need to enable the Serial-Function for the button LED to work:
+5. You need to enable the Serial-Function for the button LED to work: (Settings?)
 	```bash
-	sudo echo '[all]' >> /boot/config.txt
-	sudo echo 'enable_uart=1' >> /boot/config.txt
+	sudo echo 'enable_uart=1' >> /boot/config.txt 
 	```
 
 ---
 ## Configuration
 To configure the YouTube-Livestream Link (or better: a dynamically changed shortlink) use the config-script as follows:
 ```bash
-sh ./NAK_streamLink/streamLink/scripts/config.sh
+./NAK_streamLink/streamLink/scripts/config.sh
 ```
 There are some predefined Links but you can also provide your own link by selecting 'Others'.  
 The script generates an entry inside ```./NAK_streamLink/streamLink/config.ini```.
