@@ -19,7 +19,7 @@ LED (+)|GPIO 14 (TXD)
 
 ## Installation
  1. Flash *Raspbian Desktop* to the SD card via *Raspberry Pi Imager*
- 2. Set it up with the following credentials and settings:
+ 2. **IMPORTANT:** Set it up with the following credentials and settings:
 	 - Username: *nak-watchdog*
 	 - Password: *VAULT*
 	 - Turn on *Auto Login*
@@ -28,17 +28,34 @@ LED (+)|GPIO 14 (TXD)
 	```bash
 	git clone
 	```
-1. Run the installation script via  
+4. Run the installation script via  
 	```bash
 	./NAK_streamLink/streamLink/scripts/install.sh
 	```
-1. To select a YouTube-Livestream-Link run  
-   ```bash
-   ./NAK_streamLink/streamLink/scripts/config.sh
-   ```
+5. You need to enable the Serial-Function for the button LED to work:
+```bash
+sudo echo '[all]' >> /boot/config.txt
+sudo echo 'enable_uart=1' >> /boot/config.txt
+```
 
+---
+## Configuration
+To configure the YouTube-Livestream Link (or better: a dynamically changed shortlink) use the config-script as follows:
+```bash
+sh ./NAK_streamLink/streamLink/scripts/config.sh
+```
+There are some predefined Links but you can also provide your own link by selecting 'Others'.  
+The script generates an entry inside ```./NAK_streamLink/streamLink/config.ini```.
+
+---
 ## Updating
+To Update *streamLink* simply run the following command in ```~```:  
+```bash
+./NAK_streamLink/streamLink/scripts/update.sh
+```
+This will pull all the changes from this repository. **Please be aware that all localy made changes will be lost.**
 
+---
 
 ## Autostart durch Desktop
 Datei unter ~/.config/autostart/start_streamLink.desktop
