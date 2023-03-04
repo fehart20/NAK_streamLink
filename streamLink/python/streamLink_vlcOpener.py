@@ -6,9 +6,14 @@ import tkinter as tk #used for message-popup
 import time
 import sys
 import os #used for cec
-import keyboard #for quiting
+import configparser
 
 os.environ["DISPLAY"] = ":0"
+
+### Get Config Parameters from config.ini
+config = configparser.ConfigParser()
+config.read("../config.ini")
+youtubeLink = config.get("youtube", "link")
 
 ### Options for Youtube-DL Lib ###
 ydl_opts = {
@@ -43,7 +48,7 @@ os.system("echo 'as' | cec-client -s -d 1") #Always change raspi to active sourc
 
 
 #youtubeLink = sys.argv[1] #Get Link from googleParser which started this script through subprocess
-youtubeLink = "http://nactube.datagis.com/c/NAKNuertingen"
+#youtubeLink = "http://nactube.datagis.com/c/NAKNuertingen"
 #print(youtubeLink) #DEBUG
 
 

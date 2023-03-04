@@ -13,8 +13,8 @@ echo -e '=> Installing Python Libraries ...\n'
 pip install youtube_dl
 pip install python-vlc
 pip install tk
-pip install keyboard
 pip install RPi.GPIO
+pip install ConfigParser
 
 # Autostart
 echo -e '=> Adding script to autostart ...\n'
@@ -28,3 +28,6 @@ sudo echo 'enable_uart=1' >> /boot/config.txt
  # Pi Power Button
 git clone https://github.com/fehart20/pi-power-button.git
 sh ./pi-power-button/script/install
+
+# Run config script
+sh ./config
