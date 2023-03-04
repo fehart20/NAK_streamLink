@@ -33,10 +33,10 @@ LED (+)|GPIO 14 (TXD)
 	./NAK_streamLink/streamLink/scripts/install.sh
 	```
 5. You need to enable the Serial-Function for the button LED to work:
-```bash
-sudo echo '[all]' >> /boot/config.txt
-sudo echo 'enable_uart=1' >> /boot/config.txt
-```
+	```bash
+	sudo echo '[all]' >> /boot/config.txt
+	sudo echo 'enable_uart=1' >> /boot/config.txt
+	```
 
 ---
 ## Configuration
