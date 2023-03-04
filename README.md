@@ -18,13 +18,15 @@ LED (+)|GPIO 14 (TXD)
 
 ## Installation
  1. Flash *Raspbian Desktop* to the SD card via *Raspberry Pi Imager*
- 2. Set it up with the following creadentials and settings:
+ 2. Set it up with the following credentials and settings:
 	 - Username: *nak-watchdog*
 	 - Password: *VAULT*
 	 - Hostname: *nak-streamLink-n* (Replace *n* with the corresponding number from the deployment sheet)
-3. Clone this repository via
+3. Clone this repository via 
 	```git clone ```
-4. Run the installation script via
+4. Switch to 
+   ```cd NAK_streamLink```
+6. Run the installation script via 
 	```./install.sh```
 TODO
 

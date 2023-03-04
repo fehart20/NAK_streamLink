@@ -10,6 +10,4 @@ pip install python-vlc
 pip install tk
 pip install keyboard
 
-sudo chmod ug+x ./streamLink/start.sh
-
-sh ./start.sh
+sudo chmod ugo+x ./streamLink/start.sh
