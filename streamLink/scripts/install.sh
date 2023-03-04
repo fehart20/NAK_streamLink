@@ -19,6 +19,7 @@ pip install ConfigParser
 # Autostart
 echo -e '=> Adding script to autostart ...\n'
 mkdir ~/.config/autostart/
+cd ~/NAK_streamLink/streamLink/scripts/
 cp ../start_streamLink.desktop ~/.config/autostart/
 
 # Button functionality
@@ -26,6 +27,7 @@ echo -e '=> Adding button config ...\n'
 sudo echo '[all]' >> /boot/config.txt
 sudo echo 'enable_uart=1' >> /boot/config.txt
  # Pi Power Button
+cd ~
 git clone https://github.com/fehart20/pi-power-button.git
 sh ./pi-power-button/script/install
 

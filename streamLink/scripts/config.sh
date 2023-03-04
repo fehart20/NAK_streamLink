@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ~/NAK_streamLink/streamLink/scripts
+
 sed -i '/link/d' ../config.ini # Clear current link config.ini
 sed -i '/location/d' ../config.ini # Clear current location config.ini
 
