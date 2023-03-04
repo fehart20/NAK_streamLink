@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 echo '=> Installing Updates ...\n'
 sudo apt update
 sudo apt upgrade -y
