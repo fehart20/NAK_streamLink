@@ -14,6 +14,7 @@ os.environ["DISPLAY"] = ":0"
 config = configparser.ConfigParser()
 config.read("../config.ini")
 youtubeLink = config.get("youtube", "link")
+location = config.get("youtube", "location")
 
 ### Options for Youtube-DL Lib ###
 ydl_opts = {
@@ -31,7 +32,7 @@ def show_message_in_gui(message, duration):
 
     label = tk.Label(root, text=message, font=("Arial", 72), justify='center')
     label.pack(side='top', fill='both', expand=True)
-    label.bind("<1>", quit)
+    label.bind("<1>", quit) # When messagebox is clicked the script will exit
     
     root.after(duration * 1000, root.destroy)
     root.mainloop()
@@ -47,11 +48,6 @@ if os.system("echo 'pow 0' | cec-client -s -d 1") == "power status: standby":
 os.system("echo 'as' | cec-client -s -d 1") #Always change raspi to active source
 
 
-#youtubeLink = sys.argv[1] #Get Link from googleParser which started this script through subprocess
-#youtubeLink = "http://nactube.datagis.com/c/NAKNuertingen"
-#print(youtubeLink) #DEBUG
-
-
 while True:
     try: #Try to catch Youtube URL and start own instance of VLC - no success: Popup-Message and reload after 30 seconds
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
@@ -59,27 +55,24 @@ while True:
             video = info['url']
 
             print(f'Playing video: {info["title"]}')
-            # Play the video using your preferred media player, such as VLC
-            # The following line is an example using the python-vlc library
-            instance = vlc.Instance("prefer-insecure") #"--aout alsa"
+            # Play the video using python-vlc
+            instance = vlc.Instance("prefer-insecure") # Prefer-Insecure 'cause of certificate errors
             player = instance.media_player_new()
             player.set_fullscreen(True)
             media = instance.media_new(video)
             media.get_mrl()
             player.set_media(media)
             player.play()
-            #player.toggle_fullscreen()
             player.audio_set_volume(100)
                       
-            
-            while player.get_state() !=vlc.State.Ended: #Check if stream is over
-                time.sleep(1)
+            while player.get_state() !=vlc.State.Ended: # Check every 15s if stream is still playing
+                time.sleep(15)
                 pass
 
-            player.stop() #Stoping the VLC instance when stream is over
+            player.stop() # Stopping the VLC instance when stream is over
             show_message_in_gui("Gottesdienst beendet ...\n\nGerät schaltet sich automatisch aus", 15)
-            os.system("echo 'standby 0' | cec-client -s -d 1") #Turn off TV
+            os.system("echo 'standby 0' | cec-client -s -d 1") #T urn off TV
             os.system("shutdown -h now")
-            break #End of script
+            break # End of script
     except:
-        show_message_in_gui("Gottesdienst hat noch nicht begonnen ...\n\nBitte warten!", 30)
+        show_message_in_gui(f"Gottesdienst aus {location} hat noch nicht begonnen ...\n\nBitte warten!", 30)

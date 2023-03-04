@@ -30,4 +30,4 @@ git clone https://github.com/fehart20/pi-power-button.git
 sh ./pi-power-button/script/install
 
 # Run config script
-sh ./config
+echo -e "=> You can now run the config script to select a Stream-Link via \n ./NAK_streamLink/streamLink/scripts/config.sh"
