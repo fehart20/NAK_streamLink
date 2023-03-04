@@ -1,5 +1,4 @@
 #!/bin/bash
-echo '
 echo 'Installing Updates ...'
 sudo apt update
 sudo apt upgrade -y
@@ -14,8 +13,17 @@ pip install keyboard
 
 sudo chmod ugo+x ./start.sh
 
+# Autostart
+echo 'Adding Script to autostart ...'
 mkdir ~/.config/autostart/
 cp ./streamLink/start_streamLink.desktop ~/.config/autostart/
 
+# Button functionality
+echo 'Adding button config ...'
+sudo echo '[all]' >> /boot/config.txt
+sudo echo 'enable_uart=1' >> /boot/config.txt
+ # Pi Power Button
+git clone https://github.com/Howchoo/pi-power-button.git
+sh ./pi-power-button/script/install
 
 sh ./start.sh
