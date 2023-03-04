@@ -12,7 +12,7 @@ os.environ["DISPLAY"] = ":0"
 
 ### Get Config Parameters from config.ini
 config = configparser.ConfigParser()
-config.read("../config.ini")
+config.read("/home/nak-watchdog/NAK_streamLink/streamLink/config.ini")
 youtubeLink = config.get("youtube", "link")
 location = config.get("youtube", "location")
 
