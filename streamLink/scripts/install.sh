@@ -1,6 +1,6 @@
 #!/bin/bash
-set -e
-echo '=> Installing Updates ...\n'
+
+echo -e '=> Installing Updates ...\n'
 sudo apt update
 sudo apt upgrade -y
 echo '=> Installing needed packages ...\n'
@@ -9,7 +9,7 @@ sudo apt install vlc -y
 sudo apt install cec-utils -y
 
 # Python Libraries
-echo '=> Installing Python Libraries ...\n'
+echo -e '=> Installing Python Libraries ...\n'
 pip install youtube_dl
 pip install python-vlc
 pip install tk
@@ -17,12 +17,12 @@ pip install keyboard
 pip install RPi.GPIO
 
 # Autostart
-echo '=> Adding script to autostart ...\n'
+echo -e '=> Adding script to autostart ...\n'
 mkdir ~/.config/autostart/
 cp ./streamLink/start_streamLink.desktop ~/.config/autostart/
 
 # Button functionality
-echo '=> Adding button config ...\n'
+echo -e '=> Adding button config ...\n'
 sudo echo '[all]' >> /boot/config.txt
 sudo echo 'enable_uart=1' >> /boot/config.txt
  # Pi Power Button
