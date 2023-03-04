@@ -10,31 +10,31 @@ select linkOpt in Nuertingen Metzingen Muensingen Oberboihingen Aichtal Other; d
         Nuertingen)
             echo -e "=> Adding Streamlink for $linkOpt to config ...\n"
             echo "link: http://nactube.datagis.com/c/NAKNuertingen" >> ../config.ini
-            echo "location: 'Nürtingen'" >> ../config.ini
+            echo "location: Nürtingen" >> ../config.ini
             break
             ;;
         Metzingen)
             echo -e "=> Adding Streamlink for $linkOpt to config ...\n"
             echo "link: http://nactube.datagis.com/v/SIyvExJfyuM" >> ../config.ini
-            echo "location: 'Metzingen'" >> ../config.ini
+            echo "location: Metzingen" >> ../config.ini
             break
             ;;
         Muensingen)
             echo -e "=> Adding Streamlink for $linkOpt to config ...\n"
             echo "link: http://nactube.datagis.com/v/Q-MIeFojxsE" >> ../config.ini
-            echo "location: 'Münsingen'" >> ../config.ini
+            echo "location: Münsingen" >> ../config.ini
             break
             ;;
         Oberboihingen)
             echo -e "=> Adding Streamlink for $linkOpt to config ...\n"
             echo "link: http://nactube.datagis.com/v/mpMCZzs7wFS" >> ../config.ini
-            echo "location: 'Oberboihingen'" >> ../config.ini
+            echo "location: Oberboihingen" >> ../config.ini
             break
             ;;
         Aichtal)
             echo -e "=> Adding Streamlink for $linkOpt to config ...\n"
             echo "link: http://nactube.datagis.com/v/FQGmVQ-VqZy" >> ../config.ini
-            echo "location: 'Aichtal'" >> ../config.ini
+            echo "location: Aichtal" >> ../config.ini
             break
             ;;
         Other)
@@ -42,7 +42,7 @@ select linkOpt in Nuertingen Metzingen Muensingen Oberboihingen Aichtal Other; d
             read otherLink
             echo -e "=> Adding Streamlink $otherLink to config ...\n"
             echo "link: $otherLink" >> ../config.ini
-            echo "location: 'Speziell'" >> ../config.ini
+            echo "location: Anderswo" >> ../config.ini
             break
             ;;
         *)
