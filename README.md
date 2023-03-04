@@ -27,6 +27,8 @@ LED (+)|GPIO 14 (TXD)
 6. Run the installation script via  
 	```./NAK_streamLink/streamLink/scripts/install.sh```
 
+## Updating
+
 
 ## Autostart durch Desktop
 Datei unter ~/.config/autostart/start_streamLink.desktop
