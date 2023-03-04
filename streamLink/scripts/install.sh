@@ -23,6 +23,7 @@ cp ./NAK_streamLink/streamLink/start_streamLink.desktop ~/.config/autostart/star
 
 # Button functionality
 echo -e '=> Adding button config ...\n'
+sudo touch /boot/config.txt
 sudo echo '[all]' >> /boot/config.txt
 sudo echo 'enable_uart=1' >> /boot/config.txt
  # Pi Power Button
