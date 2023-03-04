@@ -26,7 +26,6 @@ LED (+)|GPIO 14 (TXD)
 	```git clone ```
 6. Run the installation script via  
 	```./NAK_streamLink/streamLink/scripts/install.sh```
-TODO
 
 
 ## Autostart durch Desktop
