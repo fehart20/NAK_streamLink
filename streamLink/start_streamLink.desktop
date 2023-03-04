@@ -1,4 +1,5 @@
 [Desktop Entry]
 Type=Application
-Name=NAK-streamLink
+Version=1.5
+Name=NAK-streamLink-Autostart
 Exec=/usr/bin/python3 /home/nak-watchdog/NAK_streamLink/streamLink/python/streamLink_vlcOpener.py

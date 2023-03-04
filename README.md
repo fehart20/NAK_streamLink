@@ -15,6 +15,7 @@ Button/LED Gnd|GND (Port 6)
 Button (+)|GPIO 3 (SCL)
 LED (+)|GPIO 14 (TXD)
 
+![Pinout](./pinout.svg)
 
 ## Installation
  1. Flash *Raspbian Desktop* to the SD card via *Raspberry Pi Imager*
