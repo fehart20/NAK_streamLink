@@ -19,7 +19,7 @@ pip install ConfigParser
 # Autostart
 echo -e '=> Adding script to autostart ...\n'
 mkdir ~/.config/autostart/
-cp NAK_streamLink/streamLink/start_streamLink.desktop ~/.config/autostart/
+cp ./NAK_streamLink/streamLink/start_streamLink.desktop ~/.config/autostart/
 
 # Button functionality
 echo -e '=> Adding button config ...\n'
