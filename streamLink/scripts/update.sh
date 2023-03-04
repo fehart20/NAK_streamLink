@@ -18,8 +18,7 @@ pip install ConfigParser --upgrade
 
 # Autostart
 echo -e '=> Adding script to autostart ...\n'
-cd ~/NAK_streamLink/streamLink/scripts/
-cp ../start_streamLink.desktop ~/.config/autostart/
+cp NAK_streamLink/streamLink/start_streamLink.desktop ~/.config/autostart/
 
 # Run config script
 echo -e "=> You can now run the config script again to select a stream location via \n ./NAK_streamLink/streamLink/scripts/config.sh"
