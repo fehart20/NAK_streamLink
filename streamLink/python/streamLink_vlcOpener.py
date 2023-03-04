@@ -27,7 +27,7 @@ ydl_opts = {
 def show_message_in_gui(message, duration):
     root = tk.Tk()
     root.attributes('-fullscreen',True)
-    root.title("Message")
+    root.title("streamLink - Message")
     root.geometry("600x400")
 
     label = tk.Label(root, text=message, font=("Arial", 72), justify='center')

@@ -22,10 +22,12 @@ LED (+)|GPIO 14 (TXD)
 	 - Username: *nak-watchdog*
 	 - Password: *VAULT*
 	 - Hostname: *nak-streamLink-n* (Replace *n* with the corresponding number from the deployment sheet)
-3. Clone this repository via  
+3. Clone this repository into ```/home/nak-watchdog/``` via  
 	```git clone ```
 6. Run the installation script via  
 	```./NAK_streamLink/streamLink/scripts/install.sh```
+7. To select a YouTube-Livestream-Link run  
+   ```./NAK_streamLink/streamLink/scripts/config.sh```
 
 ## Updating
 

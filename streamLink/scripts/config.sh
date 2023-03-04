@@ -46,7 +46,7 @@ select linkOpt in Nuertingen Metzingen Muensingen Oberboihingen Aichtal Other; d
             break
             ;;
         *)
-            echo "Invalid option $REPLY!"
+            echo -e "Invalid option $REPLY!"
             ;;
     esac
 done
