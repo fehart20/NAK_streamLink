@@ -13,7 +13,8 @@ sudo apt upgrade -y
 
 # Python Package
 echo -e '=> Updating Python Packages ...\n'
-pip install youtube_dl --upgrade
+#pip install youtube_dl --upgrade
+pip install yt_dlp --upgrade
 pip install python-vlc --upgrade
 pip install tk --upgrade
 pip install RPi.GPIO --upgrade

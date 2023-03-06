@@ -10,7 +10,8 @@ sudo apt install cec-utils -y
 
 # Install Python Package
 echo -e '=> Installing Python Packages ...\n'
-pip install youtube_dl
+#pip install youtube_dl
+pip install yt_dlp
 pip install python-vlc
 pip install tk
 pip install RPi.GPIO
