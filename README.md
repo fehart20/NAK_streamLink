@@ -47,17 +47,18 @@ LED (+)|GPIO 14 (TXD)
 	```bash
 	./NAK_streamLink/streamLink/scripts/install.sh
 	```
-5. You need to enable the Serial-Function for the button LED to work: (Settings?)
+5. You need to enable the Serial-Function for the button LED to work. Add the following entry into the end of ```/boot/config.txt```:
 	```bash
-	sudo echo 'enable_uart=1' >> /boot/config.txt 
+	enable_uart=1
 	```
+6. If needed: Install some remote solution (e.g. AnyDesk)
 
 ## Configuration
 To configure the YouTube-Livestream Link (or better: a dynamically changed shortlink) use the config-script as follows:
 ```bash
 ./NAK_streamLink/streamLink/scripts/config.sh
 ```
-There are some predefined Links but you can also provide your own link by selecting 'Others'.  
+There are some predefined links and locations but you can also provide your own link and location by selecting 'Others'.  
 The script generates an entry inside ```./NAK_streamLink/streamLink/config.ini```.
 
 ---
@@ -73,8 +74,6 @@ This will pull all the changes from this repository. **Please be aware that all 
 * Website: https://fhcom.de
 
 * GitHub: [@fehart20](https://github.com/fehart20)
-
-
 
 
 ## 🤝 Contributing
