@@ -1,0 +1,41 @@
+{
+    "project_name": "NAK_streamLink",
+    "version": "1.2",
+    "description": "Python-App to view YouTube livestreams without the need of any user interaction other than a click of a button.",
+    "snap_store_name": null,
+    "icon_src": null,
+    "screenshot_src": null,
+    "author": "FHCOM",
+    "github_username": "fehart20",
+    "author_linkedin_username": null,
+    "author_twitter_username": null,
+    "author_website": "https://fhcom.de",
+    "homepage": "https://github.com/fehart20/NAK_streamLink",
+    "project_demo_url": null,
+    "repository_url": "https://github.com/fehart20/NAK_streamLink",
+    "contributing_url": null,
+    "documentation_url": "https://github.com/fehart20/NAK_streamLink",
+    "license_url": null,
+    "issues_url": "https://github.com/fehart20/NAK_streamLink/issues",
+    "license": "MIT",
+    "install_command": [
+        "./NAK_streamLink/streamLink/scripts/install.sh"
+    ],
+    "usage_command": [
+        "./NAK_streamLink/streamLink/python/streamLink_vlcOpener.py"
+    ],
+    "test_command": [
+        null
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:fehart20/NAK_streamLink.git"
+    },
+    "credits": [{
+        "name": "Markdown Readme Generator",
+        "url": "https://github.com/pedroermarinho/markdown-readme-generator"
+    }],
+    "is_github_repos": true,
+    "has_start_command": true,
+    "has_test_command": false
+}
