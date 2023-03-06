@@ -42,9 +42,10 @@ select linkOpt in Nuertingen Metzingen Muensingen Oberboihingen Aichtal Other; d
         Other)
             echo "Please provide a YouTube-Livestream URL (Shortlink): "
             read otherLink
-            echo -e "=> Adding Streamlink $otherLink to config ...\n"
+            read otherLocation
+            echo -e "=> Adding Streamlink for $otherLocation to config ...\n"
             echo "link: $otherLink" >> ../config.ini
-            echo "location: Anderswo" >> ../config.ini
+            echo "location: $otherLocation" >> ../config.ini
             break
             ;;
         *)
