@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
-import youtube_dl #used for youtube-connection
+#import youtube_dl #used for youtube-connection
+import yt_dlp
 import vlc #used for playback
 import tkinter as tk #used for message-popup
 import time
@@ -50,7 +51,7 @@ os.system("echo 'as' | cec-client -s -d 1") #Always change raspi to active sourc
 
 while True:
     try: #Try to catch Youtube URL and start own instance of VLC - no success: Popup-Message and reload after 30 seconds
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(youtubeLink, download=False)
             video = info['url']
 
