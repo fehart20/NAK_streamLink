@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ./NAK_streamLink
+cd /home/nak-watchdog/NAK_streamLink
 
 echo -e "=> Updating streamLink via GitHub ... \n"
 git reset --hard
