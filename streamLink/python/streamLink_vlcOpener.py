@@ -7,6 +7,7 @@ import tkinter as tk #used for message-popup
 import time
 import sys
 import os #used for cec
+import subprocess
 import configparser
 
 os.environ["DISPLAY"] = ":0"
@@ -73,7 +74,7 @@ while True:
             player.stop() # Stopping the VLC instance when stream is over
             show_message_in_gui("Gottesdienst beendet ...\n\nGerät schaltet sich automatisch aus", 15)
             os.system("echo 'standby 0' | cec-client -s -d 1") #Turn off TV
-            os.system("/home/nak-watchdog/NAK_streamLink/streamLink/script/update.sh")
+            subprocess.call(['sh', '/home/nak-watchdog/NAK_streamLink/streamLink/script/update.sh'])
             os.system("shutdown -h now")
             break # End of script
     except:
