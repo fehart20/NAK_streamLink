@@ -22,6 +22,7 @@ Welcome to NAK_streamLink 👋
  - Plastic Box with cable outlet to safely mount the Pi
  - Ethernet cable
  - Mini-HDMI to HDMI cable
+ - TV with CEC enabled
 
 ### Cabling
 From|To
