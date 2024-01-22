@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "nak-streamlink"
+version = "0.2.0"
+description = "Python-App to view YouTube livestreams without the need of any user interaction other than a click of a button."
+authors = ["Felix Hartnagel <felix@fhcom.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+yt-dlp = "^2023.12.30"
+python-vlc = "^3.0.20123"
+configparser = "^6.0.0"
+cec = "^0.2.8"
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
