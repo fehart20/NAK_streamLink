@@ -13,6 +13,24 @@ Welcome to NAK_streamLink 👋
 > Python-App to view YouTube livestreams without the need of any user interaction other than a click of a button.
 ### 🏠 [Homepage](https://github.com/fehart20/NAK_streamLink)
 
+---
+## New Steps
+
+cec:
+```bash
+sudo apt-get install libcec-dev build-essential python-dev
+```
+
+Install poetry:
+```bash
+pip install poetry --break-system-packages
+python -m venv .venv
+source .venv/bin/activate
+poetry install
+```
+
+---
+
 ## Hardware
  - Raspberry Pi 4 (4GB)
  - SD card (min. 8GB)
