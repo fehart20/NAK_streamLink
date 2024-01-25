@@ -31,11 +31,14 @@ logging.info("CEC - Initialising")
 cec.init()
 tv = cec.Device(cec.CECDEVICE_TV)
 
-# if not tv.is_on():
-#     logging.info("CEC - Powering on tv")
-#     tv.power_on()
-#     logging.info("CEC - Set active source")
-#     cec.set_active_source()
+try:
+    if not tv.is_on():
+        logging.info("CEC - Powering on tv")
+        tv.power_on()
+        logging.info("CEC - Set active source")
+        cec.set_active_source()
+except OSError:
+    logging.critical("CEC - No CEC-Device found")
 
 while True:
     try:  #Try to catch Youtube URL and start own instance of VLC - no success: Popup-Message and reload after 30 seconds
@@ -43,7 +46,7 @@ while True:
             info = ydl.extract_info(stream_config.stream_link, download=False)
             video = info['url']
 
-            print(f'Playing video: {info["title"]}')
+            logging.info(f'Playing video: {info["title"]}')
             # Play the video using python-vlc
             instance = vlc.Instance(
                 "prefer-insecure"
