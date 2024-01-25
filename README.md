@@ -29,6 +29,15 @@ source .venv/bin/activate
 poetry install
 ```
 
+Setup:
+```bash
+python -m nakStreamLink.setup
+```
+
+Run:
+```bash
+python -m nakStreamLink.main
+```
 ---
 
 ## Hardware
