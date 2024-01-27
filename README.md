@@ -18,12 +18,14 @@ Welcome to NAK_streamLink 👋
 
 cec:
 ```bash
-sudo apt-get install libcec-dev build-essential python-dev
+sudo apt install libcec-dev build-essential
 ```
 
 Install poetry:
 ```bash
 pip install poetry --break-system-packages
+git clone https://github.com/fehart20/NAK_streamLink.git
+cd NAK_streamLink
 python -m venv .venv
 source .venv/bin/activate
 poetry install

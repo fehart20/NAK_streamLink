@@ -1,11 +1,11 @@
 import logging
 import cec
-import yt_dlp
-import vlc
 import os
-import time
-from read_config import StreamConfig
-from interface import show_message_in_gui
+import asyncio
+
+from nakStreamLink.read_config import StreamConfig
+from nakStreamLink.video_player import VLCPlayer
+import nakStreamLink.interface as gui
 
 # Setup
 os.environ["DISPLAY"] = ":0"
@@ -40,38 +40,15 @@ try:
 except OSError:
     logging.critical("CEC - No CEC-Device found")
 
-while True:
-    try:  #Try to catch Youtube URL and start own instance of VLC - no success: Popup-Message and reload after 30 seconds
-        with yt_dlp.YoutubeDL(yt_dlp_options) as ydl:
-            info = ydl.extract_info(stream_config.stream_link, download=False)
-            video = info['url']
+logging.info("INTERFACE - Starting GUI and Livestream-Check")
+youtube_url = asyncio.run(
+    gui.main(stream_config.stream_link, stream_config.stream_location))
+logging.info("STREAM - Found Livestream-URL")
 
-            logging.info(f'Playing video: {info["title"]}')
-            # Play the video using python-vlc
-            instance = vlc.Instance(
-                "prefer-insecure"
-            )  # Prefer-Insecure 'cause of certificate errors
-            player = instance.media_player_new()
-            player.set_fullscreen(True)
-            media = instance.media_new(video)
-            media.get_mrl()
-            player.set_media(media)
-            player.play()
-            player.audio_set_volume(100)
+logging.info("VLC - Starting player")
+player = VLCPlayer(youtube_url)
+player.play_until_end()
+logging.info("VLC - Player stopped")
 
-            while player.get_state(
-            ) != vlc.State.Ended:  # Check every 15s if stream is still playing
-                time.sleep(15)
-                pass
-
-            player.stop()  # Stopping the VLC instance when stream is over
-            show_message_in_gui(
-                "Gottesdienst beendet ...\n\nGerät schaltet sich automatisch aus",
-                15)
-            tv.standby()
-
-            break  # End of script
-    except:
-        show_message_in_gui(
-            f"Gottesdienst aus {stream_config.stream_location}\nhat noch nicht begonnen ...\n\nBitte warten!",
-            30)
+tv.standby()
+os.system("shutdown -h now")

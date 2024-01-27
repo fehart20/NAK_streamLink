@@ -12,6 +12,8 @@ python-vlc = "^3.0.20123"
 configparser = "^6.0.0"
 cec = "^0.2.8"
 inquirer = "^3.2.1"
+ttkbootstrap = "^1.10.1"
+asyncio = "^3.4.3"
 
 [tool.poetry.group.dev.dependencies]
 

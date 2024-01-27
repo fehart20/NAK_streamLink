@@ -35,7 +35,7 @@ class StreamConfig(Config):
         user_input_list = [
             inquirer.List(
                 'stream_link',
-                'Please chose a streaming location: ',
+                'Please choose a streaming location: ',
                 choices=[
                     ('Nürtingen',
                      ('http://nactube.datagis.com/c/NAKNuertingen',
@@ -57,6 +57,7 @@ class StreamConfig(Config):
         if not user_input["stream_link"]:
             self.stream_link = input("Own link: ")
             self.stream_location = input("Own location: ")
+            self.save_config()
             return
 
         self.stream_link = user_input["stream_link"][0]
