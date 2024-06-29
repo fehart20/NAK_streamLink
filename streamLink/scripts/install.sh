@@ -11,11 +11,11 @@ sudo apt install cec-utils -y
 # Install Python Package
 echo -e '=> Installing Python Packages ...\n'
 #pip install youtube_dl
-pip install yt_dlp
-pip install python-vlc
-pip install tk
-pip install RPi.GPIO
-pip install ConfigParser
+pip install yt_dlp --break-system-packages
+pip install python-vlc --break-system-packages
+pip install tk --break-system-packages
+pip install RPi.GPIO --break-system-packages
+pip install ConfigParser --break-system-packages
 
 # Autostart
 echo -e '=> Adding script to autostart ...\n'
